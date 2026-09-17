@@ -10,38 +10,49 @@
       <div class="mx-auto bg-primary rounded mt-3" style="height: 4px; width: 60px;"></div>
     </div>
 
-    <!-- 1. Misión (Foto Izquierda, Texto Derecha) -->
-    <div class="row align-items-center mb-5 pb-5">
-      <div class="col-lg-6 mb-4 mb-lg-0">
-        <!-- Reemplaza instalacion_1.jpg con la foto que prefieras -->
-        <img src="/src/img/instalacion_1.jpg" alt="Misión Biolitycs" class="img-fluid rounded-4 shadow-lg object-fit-cover" style="height: 400px; width: 100%;">
+    <!-- 1 y 2. Misión y Visión con Efecto Hover interactivo -->
+    <div class="row g-4 mb-5 pb-5 border-bottom">
+      
+      <!-- Tarjeta Misión -->
+      <div class="col-12 col-md-6">
+        <div class="mv-card">
+          <img src="/src/img/instalacion_1.jpg" alt="Misión Biolitycs">
+          
+          <!-- Título estático -->
+          <div class="mv-title">
+            <h4>Nuestra Misión</h4>
+          </div>
+          
+          <!-- Texto que aparece al pasar el mouse -->
+          <div class="mv-overlay">
+            <h3 class="fw-bold text-primary mb-3">Misión</h3>
+            <p class="mb-0 lh-base small">
+              Brindar servicios analíticos integrales, confiables y oportunos que contribuyan a la seguridad e inocuidad agroalimentaria, mediante el uso de metodologías validadas, tecnología adecuada y personal altamente capacitado. Nuestro compromiso es generar resultados de calidad que apoyen la toma de decisiones.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-6 px-lg-5">
-        <h3 class="fw-bold text-primary mb-4 display-6">Nuestra Misión</h3>
-        <p class="lead text-secondary lh-base">
-          Brindar servicios analíticos integrales, confiables y oportunos que contribuyan a la seguridad e inocuidad agroalimentaria, mediante el uso de metodologías validadas, tecnología adecuada y personal altamente capacitado. 
-        </p>
-        <p class="text-muted">
-          Nuestro compromiso es generar resultados de calidad que apoyen la toma de decisiones de nuestros clientes, promoviendo el desarrollo sostenible del sector agroalimentario y la protección de la salud pública y el medio ambiente.
-        </p>
-      </div>
-    </div>
 
-    <!-- 2. Visión (Texto Izquierda, Foto Derecha) -->
-    <div class="row align-items-center flex-lg-row-reverse mb-5 pb-5 border-bottom">
-      <div class="col-lg-6 mb-4 mb-lg-0">
-        <!-- Reemplaza instalacion_2.jpg con la foto que prefieras -->
-        <img src="/src/img/instalacion_2.jpg" alt="Visión Biolitycs" class="img-fluid rounded-4 shadow-lg object-fit-cover" style="height: 400px; width: 100%;">
+      <!-- Tarjeta Visión -->
+      <div class="col-12 col-md-6">
+        <div class="mv-card">
+          <img src="/src/img/instalacion_2.jpg" alt="Visión Biolitycs">
+          
+          <!-- Título estático -->
+          <div class="mv-title">
+            <h4>Nuestra Visión</h4>
+          </div>
+          
+          <!-- Texto que aparece al pasar el mouse -->
+          <div class="mv-overlay">
+            <h3 class="fw-bold text-primary mb-3">Visión</h3>
+            <p class="mb-0 lh-base small">
+              Ser un laboratorio de referencia y liderazgo en el sector agroalimentario a nivel nacional, acreditado, aprobado y reconocido por la excelencia de sus servicios analíticos, la innovación tecnológica, la confiabilidad de sus resultados y el compromiso con la satisfacción de nuestros clientes.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-6 px-lg-5">
-        <h3 class="fw-bold text-primary mb-4 display-6">Nuestra Visión</h3>
-        <p class="lead text-secondary lh-base">
-          Ser un laboratorio de referencia y liderazgo en el sector agroalimentario a nivel nacional, acreditado, aprobado y reconocido por la excelencia de sus servicios analíticos, la innovación tecnológica, la confiabilidad de sus resultados y el compromiso con la satisfacción de nuestros clientes.
-        </p>
-        <p class="text-muted">
-          Contribuyendo al fortalecimiento de la cadena productiva y a la seguridad alimentaria del país.
-        </p>
-      </div>
+
     </div>
 
     <!-- 3. Política de Calidad (Banner completo) -->
@@ -58,99 +69,143 @@
       </div>
     </div>
 
-    <!-- 4. Valores (Acordeón Bootstrap para ahorrar espacio) -->
-    <div class="mt-5">
+    <!-- 4. Valores (Acordeón Bootstrap) -->
+<!-- 4. Valores Institucionales (Cuadrícula de Tarjetas) -->
+    <div class="mt-5 pt-5">
       <div class="text-center mb-5">
         <h3 class="fw-bold text-dark mb-3">Valores Institucionales</h3>
-        <p class="text-muted">Conoce los principios que rigen nuestro trabajo diario (Haz clic para expandir).</p>
+        <p class="text-muted">Los principios que rigen nuestro trabajo diario y garantizan la excelencia.</p>
       </div>
       
-      <!-- Contenedor del Acordeón -->
-      <div class="accordion shadow-sm" id="accordionValores">
+      <!-- Grid responsivo: 1 columna en móvil, 2 en tablet, 3 en PC -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         
         <!-- Valor 1 -->
-        <div class="accordion-item border-0 border-bottom">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed fw-bold text-dark bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#valor1">
-              1. Integridad
-            </button>
-          </h2>
-          <div id="valor1" class="accordion-collapse collapse" data-bs-parent="#accordionValores">
-            <div class="accordion-body text-muted">
-              Es un valor ético y moral que implica actuar con honestidad, rectitud y coherencia entre lo que se piensa, se dice y se hace. Es la capacidad de mantener los principios firmes y hacer lo correcto, incluso cuando nadie está mirando.
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-card border-start border-primary border-4 p-2">
+            <div class="card-body">
+              <h5 class="fw-bold text-dark">1. Integridad</h5>
+              <p class="text-muted small mb-0">Actuar con honestidad, rectitud y coherencia. Es la capacidad de mantener los principios firmes y hacer lo correcto, incluso cuando nadie está mirando.</p>
             </div>
           </div>
         </div>
 
         <!-- Valor 2 -->
-        <div class="accordion-item border-0 border-bottom">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed fw-bold text-dark bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#valor2">
-              2. Respeto
-            </button>
-          </h2>
-          <div id="valor2" class="accordion-collapse collapse" data-bs-parent="#accordionValores">
-            <div class="accordion-body text-muted">
-              Es el valor moral y social que nos permite reconocer, valorar y tratar a los demás con consideración y dignidad. Implica aceptar las diferencias, escuchar sin prejuicios y no vulnerar los derechos ni la integridad de las personas.
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-card border-start border-primary border-4 p-2">
+            <div class="card-body">
+              <h5 class="fw-bold text-dark">2. Respeto</h5>
+              <p class="text-muted small mb-0">Reconocer, valorar y tratar a los demás con consideración y dignidad. Implica aceptar las diferencias y no vulnerar los derechos de las personas.</p>
             </div>
           </div>
         </div>
 
         <!-- Valor 3 -->
-        <div class="accordion-item border-0 border-bottom">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed fw-bold text-dark bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#valor3">
-              3. Tolerancia
-            </button>
-          </h2>
-          <div id="valor3" class="accordion-collapse collapse" data-bs-parent="#accordionValores">
-            <div class="accordion-body text-muted">
-              Es el valor moral que implica respetar y aceptar las diferencias de ideas, creencias o prácticas de los demás, incluso cuando son distintas a las propias. Es un pilar fundamental para la convivencia pacífica.
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-card border-start border-primary border-4 p-2">
+            <div class="card-body">
+              <h5 class="fw-bold text-dark">3. Tolerancia</h5>
+              <p class="text-muted small mb-0">Respetar y aceptar las diferencias de ideas, creencias o prácticas de los demás. Es un pilar fundamental para la convivencia pacífica.</p>
             </div>
           </div>
         </div>
 
         <!-- Valor 4 -->
-        <div class="accordion-item border-0 border-bottom">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed fw-bold text-dark bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#valor4">
-              4. Trabajo en equipo
-            </button>
-          </h2>
-          <div id="valor4" class="accordion-collapse collapse" data-bs-parent="#accordionValores">
-            <div class="accordion-body text-muted">
-              Es la colaboración coordinada entre un grupo de personas que utilizan sus habilidades complementarias para alcanzar un objetivo común. Genera sinergia, lo que significa que el resultado colectivo es mayor que la suma de los esfuerzos individuales.
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-card border-start border-primary border-4 p-2">
+            <div class="card-body">
+              <h5 class="fw-bold text-dark">4. Trabajo en equipo</h5>
+              <p class="text-muted small mb-0">Colaboración coordinada utilizando habilidades complementarias para un objetivo común, generando sinergia para mejores resultados.</p>
             </div>
           </div>
         </div>
 
         <!-- Valor 5 -->
-        <div class="accordion-item border-0 border-bottom">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed fw-bold text-dark bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#valor5">
-              5. Empatía
-            </button>
-          </h2>
-          <div id="valor5" class="accordion-collapse collapse" data-bs-parent="#accordionValores">
-            <div class="accordion-body text-muted">
-              Es básicamente ponerse en el lugar del otro, ser capaz de comprender y entender la situación desde el punto de vista de la otra persona, así como sus sentimientos y emociones sean éstas positivas o negativas.
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-card border-start border-primary border-4 p-2">
+            <div class="card-body">
+              <h5 class="fw-bold text-dark">5. Empatía</h5>
+              <p class="text-muted small mb-0">Comprender y entender la situación desde el punto de vista de la otra persona, así como sus sentimientos y emociones.</p>
             </div>
           </div>
         </div>
 
-        <!-- Agrega los valores restantes replicando el bloque de arriba (cambiando id #valor6, #valor7, etc.) -->
-        <div class="accordion-item border-0 border-bottom">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed fw-bold text-dark bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#valor6">
-              6. Confiabilidad y Excelencia (Ver más...)
-            </button>
-          </h2>
-          <div id="valor6" class="accordion-collapse collapse" data-bs-parent="#accordionValores">
-            <div class="accordion-body text-muted">
-              <strong>Liderazgo:</strong> Capacidad de influir y motivar.<br>
-              <strong>Equidad:</strong> Dar a cada cual lo que le pertenece.<br>
-              <strong>Compromiso:</strong> Obligación contraída y cumplida.<br>
-              <strong>Orden y Disciplina:</strong> Actuar de manera constante, organizada y conforme a reglas.
+        <!-- Valor 6 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-card border-start border-primary border-4 p-2">
+            <div class="card-body">
+              <h5 class="fw-bold text-dark">6. Liderazgo</h5>
+              <p class="text-muted small mb-0">Capacidad de influir, motivar y organizar a un grupo de personas para lograr metas comunes, basado en la comunicación y el trabajo colaborativo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Valor 7 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-card border-start border-primary border-4 p-2">
+            <div class="card-body">
+              <h5 class="fw-bold text-dark">7. Equidad</h5>
+              <p class="text-muted small mb-0">Dar a cada cual lo que le pertenece, reconociendo la diversidad sin que ésta signifique razón para la discriminación.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Valor 8 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-card border-start border-primary border-4 p-2">
+            <div class="card-body">
+              <h5 class="fw-bold text-dark">8. Identidad</h5>
+              <p class="text-muted small mb-0">Conjunto de rasgos y referencias que permiten reconocernos dentro de un contexto y distinguirnos para decir qué es lo que somos.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Valor 9 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-card border-start border-primary border-4 p-2">
+            <div class="card-body">
+              <h5 class="fw-bold text-dark">9. Compromiso</h5>
+              <p class="text-muted small mb-0">Capacidad de cumplir con lo pactado incluso ante circunstancias difíciles, demostrando responsabilidad y coherencia.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Valor 10 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-card border-start border-primary border-4 p-2">
+            <div class="card-body">
+              <h5 class="fw-bold text-dark">10. Lealtad</h5>
+              <p class="text-muted small mb-0">Valor y cualidad humana que implica fidelidad, respeto y compromiso inquebrantable hacia nuestra institución y clientes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Valor 11 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-card border-start border-primary border-4 p-2">
+            <div class="card-body">
+              <h5 class="fw-bold text-dark">11. Confiabilidad</h5>
+              <p class="text-muted small mb-0">Capacidad de cumplir funciones sin fallas inesperadas. Es un pilar estratégico que genera consistencia y sólida lealtad con los clientes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Valor 12 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-card border-start border-primary border-4 p-2">
+            <div class="card-body">
+              <h5 class="fw-bold text-dark">12. Honestidad</h5>
+              <p class="text-muted small mb-0">Mostrar respeto hacia los demás con integridad. Es la base de la confianza y la clave de relaciones sociales sanas y duraderas.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Valor 13 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-card border-start border-primary border-4 p-2">
+            <div class="card-body">
+              <h5 class="fw-bold text-dark">13. Orden y disciplina</h5>
+              <p class="text-muted small mb-0">Capacidad de actuar de manera constante, organizada y conforme a reglas para alcanzar la estabilidad y excelencia.</p>
             </div>
           </div>
         </div>
