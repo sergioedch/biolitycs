@@ -1,32 +1,49 @@
-// 1. Definimos el verde del logo y un fondo oscuro elegante
-$biolitycs-green: #8CC63F; // Ajusta este hex si tienes el código exacto
-$biolitycs-dark: #1A202C;  // Un gris muy oscuro, casi negro, para contraste
-
-// 2. Sobreescribimos las variables de Bootstrap
-$primary: $biolitycs-green;
-$dark: $biolitycs-dark;
-
-// Para que el texto en los botones verdes se lea bien (le ponemos texto oscuro)
-$yiq-contrasted-threshold: 200;
-
-// 3. Importamos Bootstrap
-@import "bootstrap/scss/bootstrap";
-
-// 4. Clases personalizadas extra
-.hero-section {
-  background-color: $dark;
-  position: relative;
-  overflow: hidden;
+body {
+  padding-top: 0;
 }
 
-// Efecto chulo para las tarjetas
+.hero-section {
+  // Combinamos un degradado oscuro/semitransparente encima de tu imagen de fondo
+  background: linear-gradient(135deg, rgba($biolitycs-green-dark, 0.90) 0%, rgba($biolitycs-dark-base, 0.94) 100%), 
+              url('/src/img/Imagen_Inicio.png');
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh; 
+  display: flex;
+  align-items: center; 
+  padding-top: 100px; 
+  padding-bottom: 50px;
+}
+
+// Límite de ancho para el texto del hero
+.hero-text-limit {
+  max-width: 90%;
+}
+
+// Estilos, sombra y animación para el logo del hero
+.logo-hero-anim {
+  max-height: 400px;
+  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.4));
+  transition: transform 0.5s ease-out;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+
 .hover-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-bottom: 4px solid transparent;
-  
+
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
     border-bottom: 4px solid $primary;
   }
 }

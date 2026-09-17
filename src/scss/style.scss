@@ -1,5 +1,16 @@
+$biolitycs-green-bright: #8CC63F;
+$biolitycs-green-dark:   #143d23;
+$biolitycs-dark-base:    #0d2917; 
+$biolitycs-dark-base:    #0d2917;
+
+// 2. Sobrescritura de Bootstrap
+$primary: $biolitycs-green-bright;
+$dark:    $biolitycs-green-dark;
+$yiq-contrasted-threshold: 200;
+
+// 3. Bootstrap core
 @import "bootstrap/scss/bootstrap";
 
-// Aquí irán los estilos extra que le quieras dar a Biolitycs
-@import "index";
+// 4. Módulos individuales
 @import "navbar";
+@import "index";

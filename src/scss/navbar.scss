@@ -1,17 +1,55 @@
-// (Mantén las variables y el import de Bootstrap que ya tenías arriba)
+.custom-floating-nav {
+  // Color base con transparencia controlada y efecto esmerilado
+  background-color: rgba($biolitycs-green-dark, 0.82) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  
+  // Borde sutil traslúcido para definir la silueta
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28) !important;
+  transition: all 0.3s ease;
 
-// 1. Damos un margen superior al body para compensar el menú fijo
-body {
-  padding-top: 80px; 
+  // 1. Diseño responsivo: Más cuadrado para móviles y tablets
+  border-radius: 0.75rem; 
+
+  // 2. Pantallas grandes (escritorio): Cambia a forma de píldora
+  @media (min-width: 992px) {
+    border-radius: 50rem;
+  }
 }
-
-// 2. Un efecto sutil cuando pasas el mouse por los enlaces del menú
-.navbar-nav .nav-link {
-  transition: color 0.3s ease;
+// Efecto hover global para que los botones "floten" al pasar el mouse
+.btn {
+  transition: all 0.3s ease;
   
   &:hover {
-    color: $primary !important; // Se pintan de verde al pasar el mouse
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2) !important;
   }
 }
 
-// (Mantén tus clases .hero-section y .hover-card aquí abajo)
+// Opcional: Asegura que el texto del botón secundario se lea bien al rellenarse de blanco
+.btn-outline-light:hover {
+  color: $biolitycs-green-dark !important;
+}
+
+.logo-nav {
+  height: 60px;
+  width: auto;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.05); // Pequeño efecto al pasar el mouse (opcional)
+  }
+}
+.navbar-nav {
+  .nav-link {
+    color: rgba(255, 255, 255, 0.88) !important;
+    transition: color 0.25s ease, transform 0.25s ease;
+
+    &:hover,
+    &.active {
+      color: $biolitycs-green-bright !important;
+      transform: translateY(-1px);
+    }
+  }
+}
