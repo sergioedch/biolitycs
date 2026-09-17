@@ -1,0 +1,32 @@
+// 1. Definimos el verde del logo y un fondo oscuro elegante
+$biolitycs-green: #8CC63F; // Ajusta este hex si tienes el código exacto
+$biolitycs-dark: #1A202C;  // Un gris muy oscuro, casi negro, para contraste
+
+// 2. Sobreescribimos las variables de Bootstrap
+$primary: $biolitycs-green;
+$dark: $biolitycs-dark;
+
+// Para que el texto en los botones verdes se lea bien (le ponemos texto oscuro)
+$yiq-contrasted-threshold: 200;
+
+// 3. Importamos Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// 4. Clases personalizadas extra
+.hero-section {
+  background-color: $dark;
+  position: relative;
+  overflow: hidden;
+}
+
+// Efecto chulo para las tarjetas
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 4px solid transparent;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    border-bottom: 4px solid $primary;
+  }
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biolitycs Labs - Análisis Agroalimentario</title>
+  </head>
+  <body class="bg-light"> <!-- Fondo general un poco grisáceo para que las tarjetas blancas destaquen -->
+    
+    <!-- Inyección del Navbar -->
+    <load src="/src/components/navbar.html" />
+
+    <!-- 1. Hero / Portada con tema oscuro para resaltar el logo blanco -->
+    <header class="hero-section py-5 mb-5 shadow">
+      <div class="container py-4">
+        <div class="row align-items-center g-5 flex-column-reverse flex-lg-row">
+          <div class="col-lg-6 text-center text-lg-start">
+            <h1 class="display-5 fw-bold text-white mb-3">
+              Análisis Agroalimentario de <span class="text-primary">Alta Precisión</span>
+            </h1>
+            <p class="lead text-light opacity-75 mb-4">
+              Soluciones confiables y con los más altos estándares para el
+              sector agroindustrial, agrícola y pecuario.
+            </p>
+            <a href="#contacto" class="btn btn-primary btn-lg fw-bold px-4 rounded-pill shadow-sm">
+              Conoce los servicios
+            </a>
+          </div>
+          <div class="col-lg-6 text-center">
+            <!-- El logo ahora brillará sobre el fondo oscuro -->
+            <img src="/src/img/Biolitycs_Lab_Logo.png" alt="Laboratorio Biolitycs"
+              class="img-fluid px-md-5" style="max-height: 350px; object-fit: contain;" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container mb-5">
+      <!-- 2. Sección ¿Quiénes somos? -->
+      <section class="row justify-content-center text-center bg-white p-5 shadow-sm rounded-4 mb-5 border-top border-primary border-4">
+        <div class="col-12 col-md-10">
+          <h2 class="text-dark fw-bold mb-4">¿Quiénes somos?</h2>
+          <p class="lead text-secondary">
+            <strong class="text-primary">Biolitycs Labs S.A. de C.V.</strong> es un Laboratorio de
+            Análisis Agroalimentario comprometido con brindar soluciones
+            confiables y de alta calidad para los sectores agroindustrial,
+            agrícola y pecuario.
+          </p>
+          <p class="text-muted mt-3">
+            Nacimos con la visión de contribuir al desarrollo y fortalecimiento
+            del sector productivo de Michoacán, trabajando bajo los más altos
+            estándares de calidad, con responsabilidad, profesionalismo y un
+            amplio compromiso con nuestros clientes.
+          </p>
+        </div>
+      </section>
+
+      <!-- 3. Sección de Galería de Fotos / Instalaciones -->
+      <section class="my-5 pt-4">
+        <div class="text-center mb-5">
+          <h3 class="fw-bold text-dark display-6">Nuestras Instalaciones</h3>
+          <p class="text-muted lead">Tecnología y equipo especializado a tu disposición</p>
+          <div class="mx-auto bg-primary rounded" style="height: 4px; width: 60px;"></div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Foto 1 -->
+          <div class="col-12 col-md-4">
+            <div class="card h-100 border-0 shadow-sm overflow-hidden hover-card">
+              <img src="/src/img/celda_nosotros.png" class="card-img-top object-fit-cover"
+                alt="Área de análisis" style="height: 240px;" />
+              <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold text-dark">Análisis Microbiológico</h5>
+                <p class="card-text text-muted small mb-0">Evaluación rigurosa de muestras agroalimentarias.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto 2 -->
+          <div class="col-12 col-md-4">
+            <div class="card h-100 border-0 shadow-sm overflow-hidden hover-card">
+              <img src="/src/img/coliformes.png" class="card-img-top object-fit-cover"
+                alt="Equipos del laboratorio" style="height: 240px;" />
+              <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold text-dark">Equipo Especializado</h5>
+                <p class="card-text text-muted small mb-0">Instrumental calibrado bajo normativas oficiales.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto 3 -->
+          <div class="col-12 col-md-4">
+            <div class="card h-100 border-0 shadow-sm overflow-hidden hover-card">
+              <img src="/src/img/escherichia.png" class="card-img-top object-fit-cover"
+                alt="Muestreo en campo" style="height: 240px;" />
+              <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold text-dark">Sector Agrícola y Pecuario</h5>
+                <p class="card-text text-muted small mb-0">Soluciones directas para el productor en Michoacán.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

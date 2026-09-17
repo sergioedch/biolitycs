@@ -1,0 +1,17 @@
+// (Mantén las variables y el import de Bootstrap que ya tenías arriba)
+
+// 1. Damos un margen superior al body para compensar el menú fijo
+body {
+  padding-top: 80px; 
+}
+
+// 2. Un efecto sutil cuando pasas el mouse por los enlaces del menú
+.navbar-nav .nav-link {
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: $primary !important; // Se pintan de verde al pasar el mouse
+  }
+}
+
+// (Mantén tus clases .hero-section y .hover-card aquí abajo)
