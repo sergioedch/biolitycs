@@ -2,21 +2,25 @@ body {
   padding-top: 0;
 }
 
+.color-biolitycs-green {
+  color: $biolitycs-green
+}
+
 .hero-section {
   // Combinamos un degradado oscuro/semitransparente encima de tu imagen de fondo
-  background: linear-gradient(135deg, rgba($biolitycs-green-dark, 0.90) 0%, rgba($biolitycs-dark-base, 0.94) 100%), 
-              url('/src/img/Imagen_Inicio.png');
-  
+  background: linear-gradient(135deg, rgba($biolitycs-blue-dark, 0.90) 0%, rgba($biolitycs-blue-mid, 0.94) 100%),
+    url('/src/img/fondo.jpeg');
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
+
   position: relative;
   overflow: hidden;
-  min-height: 100vh; 
+  min-height: 100vh;
   display: flex;
-  align-items: center; 
-  padding-top: 100px; 
+  align-items: center;
+  padding-top: 100px;
   padding-bottom: 50px;
 }
 
@@ -28,9 +32,9 @@ body {
 // Estilos, sombra y animación para el logo del hero
 .logo-hero-anim {
   max-height: 400px;
-  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.4));
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.4));
   transition: transform 0.5s ease-out;
-  
+
   &:hover {
     transform: scale(1.05);
   }
@@ -49,71 +53,460 @@ body {
 }
 
 
-// Efecto interactivo (Hover) para Misión y Visión
-.mv-card {
+
+
+
+// Contenedor para las imágenes superpuestas del "Acerca de nosotros"
+.staggered-images {
   position: relative;
-  overflow: hidden;
-  border-radius: 1rem;
-  height: 350px; // Mantiene ambas tarjetas del mismo tamaño
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  min-height: 500px;
 
-  // La imagen de fondo
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+  .img-back {
+    width: 75%;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
 
-  // El letrero inferior que se ve antes de pasar el mouse
-  .mv-title {
+  .img-front {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(13, 41, 23, 0.85); // Tu verde ultra oscuro
-    padding: 1rem;
-    text-align: center;
-    transition: opacity 0.3s ease;
-    
-    h4 {
-      color: white;
-      margin: 0;
-      font-weight: bold;
-    }
+    bottom: -10%;
+    right: 0;
+    width: 60%;
+    border: 10px solid white;
+    border-radius: 0.5rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
   }
+}
+.h-500{
+  height: 500px;
+}
+// La caja verde de estadísticas (Ej. 17025 / Años de experiencia)
+.green-stat-box {
+  background-color: $biolitycs-green; // Verde estilo laboratorio de tus imágenes
+  color: white;
+  padding: 2rem;
+  min-width: 180px;
+  text-align: center;
+  border-radius: 1.5rem;
+}
 
-  // La capa oscura con el texto que aparece al pasar el mouse
-  .mv-overlay {
+// Íconos de check redondos para "Razones para elegirnos"
+.icon-circle-check {
+  background-color: $biolitycs-green;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+// Íconos pequeños de contacto
+.contact-icon-small {
+  background-color: $biolitycs-green;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+
+.stats-pill-container {
+  background-color: #ffffff;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50rem; // Forma de píldora en PC
+  padding: 2rem 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); // Sombra súper suave
+
+  // En móviles, quitamos la píldora para que no se apriete el contenido
+  @media (max-width: 768px) {
+    border-radius: 1.5rem;
+    padding: 2rem;
+  }
+}
+
+// Líneas divisorias para las estadísticas
+.stat-divider {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    border-right: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+// 3. Tarjetas de Misión y Visión (Bordes sutiles)
+.mv-clean-card {
+  background-color: #ffffff;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  height: 100%;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  }
+}
+
+// Ícono decorativo tipo "asterisco/sol" en la esquina de la tarjeta
+.mv-deco-icon {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 45px;
+  height: 45px;
+  background-color: $corporate-green;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0, 168, 132, 0.3);
+}
+
+// 4. Imagen complementaria para Misión/Visión
+.mv-image-card {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  min-height: 300px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+// Altura fija para las imágenes de la sección Política de Calidad
+.img-tall-policy {
+  height: 450px;
+
+  @media (max-width: 768px) {
+    height: 300px; // Se hacen un poco más pequeñas en celulares para no ocupar tanta pantalla
+  }
+}
+
+
+
+
+
+//Pagina de servicios
+// ==========================================
+// Tarjetas de Servicios (Fondo completo + Degradado)
+// ==========================================
+.service-card-img {
+  position: relative;
+  height: 420px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: $biolitycs-dark-base; // Fondo por si la imagen tarda en cargar
+
+  img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba($biolitycs-green-dark, 0.95); // Tu verde opaco
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2.5rem;
-    opacity: 0; // Oculto por defecto
-    transform: translateY(20px); // Ligeramente movido hacia abajo
-    transition: all 0.4s ease;
-    text-align: center;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.6s ease;
   }
 
-  // La animación al pasar el mouse
+  // El degradado que va de azul oscuro a transparente
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%; // Cubre el 70% inferior de la tarjeta
+    background: linear-gradient(to top, rgba($biolitycs-blue-dark, 0.95) 0%, rgba($biolitycs-blue-dark, 0) 100%);
+    z-index: 2;
+  }
+
+  // Contenedor del texto
+  .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    z-index: 3;
+    color: white;
+  }
+
   &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+
     img {
-      transform: scale(1.1); // La foto crece un poquito
-    }
-    .mv-title {
-      opacity: 0; // El letrero de abajo se esconde
-    }
-    .mv-overlay {
-      opacity: 1; // El texto aparece
-      transform: translateY(0); // Sube a su posición original
+      transform: scale(1.08); // Pequeño zoom a la foto
     }
   }
+}
+
+// Borde derecho solo en pantallas medianas y grandes
+@media (min-width: 768px) {
+  .border-end-md {
+    border-right: 1px solid rgba(0,0,0,0.1);
+  }
+}
+
+// Badge de estado verde
+.bg-corporate-green {
+  background-color: $corporate-green !important;
+}
+
+
+// ==========================================
+// Slider Deslizable para Acreditaciones (Outline)
+// ==========================================
+
+
+.acc-static-item {
+  height: 100%;
+  background-color: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  position: relative;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    border-color: $corporate-green;
+    transform: translateY(-5px);
+  }
+
+  .acc-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba($corporate-blue, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    color: $corporate-blue;
+  }
+}
+
+
+// ==========================================
+// Línea de Tiempo para Buzón de Quejas
+// ==========================================
+.quejas-timeline {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 2px dashed rgba($corporate-blue, 0.2);
+
+  .timeline-step {
+    position: relative;
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    // Usando tus variables oficiales
+    &::before {
+      content: '';
+      position: absolute;
+      left: -2.35rem;
+      top: 0.25rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $corporate-green;
+      box-shadow: 0 0 0 4px rgba($corporate-green, 0.2);
+    }
+  }
+}
+
+
+
+// ==========================================
+// Sección de Contacto y Clases Corporativas
+// ==========================================
+.contacto-bg {
+  background: linear-gradient(135deg, rgba($corporate-blue, 0.88) 0%, rgba($corporate-blue, 0.94) 100%),
+    url('/src/img/contacto.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+// Tarjeta de Contacto Integrada (Glassmorphism oscuro)
+/* .contact-card-custom {
+  background-color: ($biolitycs-green , 0.5) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba($corporate-green, 0.2) !important;
+  color: $contact-text-color;
+
+  h4 {
+    color: $corporate-green !important;
+  }
+
+  label, .text-muted {
+    color: rgba($contact-text-color, 0.8) !important;
+  }
+}
+
+// Inputs integrados
+.contact-input {
+  background-color: $contact-input-bg !important;
+  border: 1px solid rgba($corporate-green, 0.3) !important;
+  color: $contact-text-color !important;
+
+  &::placeholder {
+    color: rgba($contact-text-color, 0.5) !important;
+  }
+
+  &:focus {
+    background-color: rgba($corporate-blue, 0.9) !important;
+    border-color: $corporate-green !important;
+    color: $contact-text-color !important;
+    box-shadow: 0 0 0 0.25rem rgba($corporate-green, 0.25) !important;
+  }
+}
+ */
+
+ // ==========================================
+// Tarjeta de Contacto (Clara y Elegante)
+// ==========================================
+// ==========================================
+// Tarjeta de Contacto (Clara y Translúcida)
+// ==========================================
+.contact-card-custom {
+  background-color: $contact-card-bg !important;
+  backdrop-filter: blur(12px); // Efecto esmerilado que difumina la imagen de fondo
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba($corporate-green, 0.3) !important;
+  color: $contact-text-color;
+
+  h4 {
+    color: $corporate-blue !important; 
+  }
+
+  label, .text-muted, span {
+    color: #475569 !important; 
+  }
+}
+
+// Inputs limpios con un toque translúcido
+.contact-input {
+  background-color: $contact-input-bg !important;
+  border: 1px solid rgba($corporate-blue, 0.15) !important;
+  color: $corporate-blue !important;
+
+  &::placeholder {
+    color: #94a3b8 !important;
+  }
+
+  &:focus {
+    background-color: #ffffff !important;
+    border-color: $corporate-green !important;
+    color: $corporate-blue !important;
+    box-shadow: 0 0 0 0.25rem rgba($corporate-green, 0.25) !important;
+  }
+}
+.contact-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  background-color: rgba($corporate-green, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  
+  svg {
+    stroke: $corporate-green;
+  }
+}
+
+.map-container {
+  height: 480px; 
+  border: 1px solid rgba($corporate-green, 0.2);
+  
+  iframe {
+    border: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+
+
+
+// ==========================================
+// Footer Corporativo (Degradado y Redes)
+// ==========================================
+.footer-bg {
+  // Degradado usando tus variables exactas
+  background: linear-gradient(135deg, $biolitycs-blue-dark 0%, $biolitycs-blue-mid 100%);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-logo {
+  max-height: 70px;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+
+  &:hover {
+    color: $corporate-green;
+    transform: translateX(5px);
+  }
+}
+
+// Estilos para los íconos de redes sociales en círculo
+.footer-social-link {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.05); // Fondo oscuro semitransparente
+  border: 1px solid rgba(255, 255, 255, 0.15); // Borde circular sutil
+  border-radius: 50%; // Convierte el contenedor en un círculo
+  color: rgba(255, 255, 255, 0.75);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:hover {
+    background-color: $corporate-green; // Fondo verde al hacer hover
+    border-color: $corporate-green;
+    color: $corporate-blue; // Ícono oscuro para hacer contraste con el verde
+    transform: translateY(-3px);
+  }
+  
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.footer-contact-icon {
+  stroke: $corporate-green;
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.1);
 }

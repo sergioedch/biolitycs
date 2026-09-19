@@ -1,12 +1,50 @@
-$biolitycs-green-bright: #8CC63F;
+/* $biolitycs-green-bright: #8CC63F;
 $biolitycs-green-dark:   #143d23;
 $biolitycs-dark-base:    #0d2917; 
 $biolitycs-dark-base:    #0d2917;
+$corporate-blue: #002b5e;
+$corporate-green: #00a884;
 
 // 2. Sobrescritura de Bootstrap
 $primary: $biolitycs-green-bright;
 $dark:    $biolitycs-green-dark;
 $yiq-contrasted-threshold: 200;
+ */
+
+// 1. Colores corporativos extraídos exactamente del logo
+$biolitycs-green-bright: #8CC63F;
+$biolitycs-green: #00a884; 
+$biolitycs-blue-mid:     #0970A8; 
+$biolitycs-blue-dark:    #003865; 
+$rojo:#C30000;
+$azul: #0000D3;
+$verde: #00B500;
+
+
+$biolitycs-green-dark:   #143d23;
+$biolitycs-dark-base:    #0d2917;
+
+$corporate-blue:  $biolitycs-blue-dark;
+$corporate-green: $biolitycs-green-bright;
+
+/* $contact-card-bg: rgba($corporate-blue, 0.75); 
+$contact-input-bg: rgba($corporate-blue, 0.4);   
+$contact-text-color: #ffffff; */
+$contact-card-bg: rgba(248, 250, 252, 0.85); // 85% de opacidad para que se alcance a ver el fondo
+$contact-input-bg: rgba(255, 255, 255, 0.9);   // Inputs ligeramente translúcidos pero muy limpios
+$contact-text-color: #334155;
+
+// 2. Sobrescritura de Bootstrap
+$primary:   $biolitycs-green-bright;
+$secondary: $biolitycs-blue-mid; 
+$dark:      $biolitycs-green-dark;
+$yiq-contrasted-threshold: 200;
+
+// Clases de texto utilitarias
+.text-corporate-blue { color: $corporate-blue !important; }
+.text-corporate-green { color: $corporate-green !important; }
+.text-corporate-mid { color: $biolitycs-blue-mid !important; }
+
 
 // 3. Bootstrap core
 @import "bootstrap/scss/bootstrap";

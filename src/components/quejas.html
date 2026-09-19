@@ -1,0 +1,126 @@
+<section id="quejas" class="py-5 bg-white border-top">
+  <div class="container my-5">
+
+    <!-- Encabezado -->
+    <div class="row justify-content-center text-center mb-5 pb-3">
+      <div class="col-12 col-lg-8">
+        <span class="text-uppercase fw-bold text-corporate-green">Mejora
+          Continua</span>
+        <h2 class="display-5 fw-bolder text-corporate-blue mt-2 mb-3">Atención a
+          Quejas</h2>
+        <p class="text-muted lead mb-0">
+          En Biolitycs Lab valoramos tus comentarios. Si existe alguna
+          insatisfacción con el servicio brindado, nuestro proceso normativo
+          garantiza una atención oportuna y transparente.
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-5 align-items-start">
+
+      <!-- Columna Izquierda: Formulario (Buzón Digital) -->
+      <div class="col-12 col-lg-6">
+        <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-light">
+          <h4 class="fw-bold text-corporate-blue mb-4">Registrar Queja</h4>
+
+          <form id="form-quejas">
+            <!-- INPUT OCULTO PARA IDENTIFICAR EL FORMULARIO -->
+            <input type="hidden" name="tipo_formulario" value="quejas">
+
+            <div class="mb-3">
+              <label for="nombreQueja" class="form-label fw-medium small">Nombre
+                o Empresa</label>
+              <input type="text" class="form-control" id="nombreQueja" name="nombreQueja"
+                placeholder="Ej. Juan Pérez / Agrícola Sur" required>
+            </div>
+
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label for="correoQueja" class="form-label fw-medium small">Correo Electrónico</label>
+                <input type="email" class="form-control" id="correoQueja" name="correoQueja"
+                  placeholder="contacto@empresa.com" required>
+              </div>
+              <div class="col-md-6">
+                <label for="telQueja" class="form-label fw-medium small">Teléfono</label>
+                <input type="tel" class="form-control" id="telQueja" name="telQueja" placeholder="Opcional">
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label for="descQueja" class="form-label fw-medium small">Descripción de la
+                insatisfacción</label>
+              <textarea class="form-control" id="descQueja" name="descQueja" rows="4"
+                placeholder="Por favor detalla el servicio brindado y el motivo de la queja..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 fw-bold py-3 rounded-pill border-0 text-dark shadow-sm">
+              Enviar al Buzón de Quejas
+            </button>
+
+            <p class="text-muted small mt-3 text-center mb-0">
+              *También puedes formalizar tu queja de manera presencial o verbal
+              en nuestras instalaciones.
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Proceso (Línea de Tiempo) -->
+      <div class="col-12 col-lg-6 ps-lg-5">
+        <h4 class="fw-bold text-corporate-blue mb-4">Nuestro Proceso de
+          Atención</h4>
+        <p class="text-muted mb-5">Conforme a nuestro sistema de gestión, cada
+          reporte sigue un riguroso proceso de investigación y resolución.</p>
+
+        <div class="quejas-timeline">
+
+          <!-- Paso 1 -->
+          <div class="timeline-step">
+            <h5 class="fw-bold text-corporate-blue mb-1">1. Recepción y
+              Registro</h5>
+            <p class="text-muted small lh-lg">
+              El cliente manifiesta su queja y se registra oficialmente en el
+              formato PP04-F01 dentro de nuestro buzón[cite: 7].
+            </p>
+          </div>
+
+          <!-- Paso 2 -->
+          <div class="timeline-step">
+            <h5 class="fw-bold text-corporate-blue mb-1">2. Revisión y
+              Análisis</h5>
+            <p class="text-muted small lh-lg">
+              La Gerencia de Administración revisa el buzón semanalmente,
+              registra el caso (PP04-F03) y determina si la queja procede. En
+              caso negativo, se notifican las razones[cite: 7].
+            </p>
+          </div>
+
+          <!-- Paso 3 -->
+          <div class="timeline-step">
+            <h5 class="fw-bold text-corporate-blue mb-1">3. Investigación
+              Técnica</h5>
+            <p class="text-muted small lh-lg">
+              La Dirección General designa personal técnico para investigar. Si
+              se detecta un "Trabajo No Conforme", se aplica inmediatamente el
+              procedimiento de acciones correctivas[cite: 7].
+            </p>
+          </div>
+
+          <!-- Paso 4 -->
+          <div class="timeline-step">
+            <h5 class="fw-bold text-corporate-blue mb-1">4. Resolución y
+              Notificación</h5>
+            <p class="text-muted small lh-lg">
+              Se generan acciones correctivas o preventivas y se notifica al
+              cliente para confirmar que la información y las acciones
+              implementadas resuelven su insatisfacción de manera
+              satisfactoria[cite: 7].
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

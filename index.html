@@ -1,38 +1,41 @@
 <!doctype html>
 <html lang="es">
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Biolitycs Labs - Análisis Agroalimentario</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biolitycs Labs - Análisis Agroalimentario</title>
+  </head>
 
-<body class="bg-light">
+  <body class="bg-light">
 
+    <load src="/src/components/navbar.html" />
+    <!-- 1. Hero -->
+    <load src="/src/components/hero.html" />
 
-  <load src="/src/components/navbar.html" />
-  <!-- 1. Hero -->
-  <load src="/src/components/hero.html" />
+    <main>
 
+      <!-- 3. Nosotros (Misión, Visión, Valores) -->
+      <load src="/src/components/nosotros.html" />
 
-  <main class="container mb-5">
+      <!-- 4. Servicios y Métodos Analíticos -->
+      <load src="/src/components/servicios.html" />
 
-    <!-- 3. Nosotros (Misión, Visión, Valores) -->
-    <load src="/src/components/nosotros.html" />
+      <!-- 5. Acreditaciones y Calidad -->
+      <load src="/src/components/acreditaciones.html" />
 
-    <!-- 4. Servicios y Métodos Analíticos -->
-    <load src="/src/components/servicios.html" />
+      <!-- 6. Atención a Quejas -->
+      <load src="/src/components/quejas.html" />
 
-    <!-- 5. Acreditaciones y Calidad -->
-    <load src="/src/components/acreditaciones.html" />
+      <load src="/src/components/contacto.html" />
 
-    <!-- 6. Atención a Quejas -->
-    <load src="/src/components/quejas.html" />
+    </main>
 
-  </main>
+    <load src="/src/components/footer.html" />
 
-  <script type="module" src="/src/main.js"></script>
-</body>
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/js/index.js"></script>
+  </body>
 
 </html>

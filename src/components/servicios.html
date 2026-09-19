@@ -1,77 +1,217 @@
-<section id="servicios" class="my-5 pt-5">
-  <!-- Encabezado de la sección -->
-  <div class="text-center mb-5">
-    <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 text-dark fw-bold shadow-sm">
-      Catálogo Analítico
-    </span>
-    <h2 class="fw-bold text-dark display-5 mb-3">Nuestros Servicios</h2>
-    <p class="text-muted lead mx-auto" style="max-width: 800px;">
-      En Biolitycs Lab realizamos análisis microbiológicos en superficies vivas e inertes, productos vegetales, agua de uso y consumo humano y alimentos[cite: 1].
-    </p>
-    <div class="mx-auto bg-primary rounded mt-4" style="height: 4px; width: 60px;"></div>
-  </div>
+<section id="servicios" class="py-5 my-5 bg-white">
+  <div class="container">
 
-  <!-- Cuadrícula de Servicios -->
-  <div class="row g-4">
-    
-    <!-- Tarjeta 1: Patógenos -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card h-100 border-0 shadow-sm hover-card p-4">
-        <div class="card-body">
-          <div class="mb-3">
-            <h3 class="fw-bold text-primary display-6">01</h3>
-          </div>
-          <h4 class="card-title fw-bold text-dark mb-3">Detección de Patógenos</h4>
-          <p class="card-text text-secondary mb-4">
-            Métodos de referencia y rápidos para asegurar la inocuidad alimentaria.
-          </p>
-          <ul class="list-unstyled text-muted small">
-            <li class="mb-2">✓ Aislamiento de Salmonella spp[cite: 1]</li>
-            <li class="mb-2">✓ Aislamiento de L. monocytogenes[cite: 1]</li>
-            <li class="mb-2">✓ Detección en ambiente por placa Petrifilm[cite: 1]</li>
-          </ul>
-        </div>
+    <!-- Encabezado centrado -->
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-12 col-md-8">
+        <h2 class="display-4 fw-bolder text-corporate-blue mb-3">Servicios</h2>
+        <p class="text-muted lead">
+          Evaluamos el cumplimiento normativo en sanidad e inocuidad mediante
+          métodos de referencia acreditables y técnicas de control de calidad.
+        </p>
       </div>
     </div>
 
-    <!-- Tarjeta 2: Indicadores y Coliformes -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card h-100 border-0 shadow-sm hover-card p-4">
-        <div class="card-body">
-          <div class="mb-3">
-            <h3 class="fw-bold text-primary display-6">02</h3>
+    <!-- Cuadrícula de 4 tarjetas (Patógenos e Indicadores Principales) -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4 mb-5">
+
+      <!-- Tarjeta 1: Coliformes -->
+      <div class="col">
+        <div class="service-card-img">
+          <img src="/src/img/coliformes.png" alt="Coliformes Fecales y Totales">
+          <div class="overlay"></div>
+          <div class="content">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8CC63F" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+              </svg>
+              <h4 class="fw-bold mb-0">Coliformes</h4>
+            </div>
+            <p class="mb-0 small opacity-75 lh-sm">
+              • Técnica NMP (NOM-210)<br>
+              • Placa Petrifilm (AOAC 2018.13)<br>
+              Aplica: Agua, Alimentos, Superficies
+            </p>
           </div>
-          <h4 class="card-title fw-bold text-dark mb-3">Microorganismos Indicadores</h4>
-          <p class="card-text text-secondary mb-4">
-            Evaluación de higiene mediante técnicas NMP y recuento en placa.
-          </p>
-          <ul class="list-unstyled text-muted small">
-            <li class="mb-2">✓ Coliformes totales y fecales[cite: 1]</li>
-            <li class="mb-2">✓ Cuantificación de E. coli[cite: 1]</li>
-            <li class="mb-2">✓ Mesófilos aerobios en placa[cite: 1]</li>
-          </ul>
         </div>
       </div>
+
+      <!-- Tarjeta 2: Escherichia coli -->
+      <div class="col">
+        <div class="service-card-img">
+          <img src="/src/img/escherichia.png" alt="Escherichia coli">
+          <div class="overlay"></div>
+          <div class="content">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8CC63F" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+              </svg>
+              <h4 class="fw-bold mb-0">Escherichia coli</h4>
+            </div>
+            <p class="mb-0 small opacity-75 lh-sm">
+              • Técnica NMP (NOM-210)<br>
+              • Placa Petrifilm (AOAC 2018.13)<br>
+              Aplica: Agua, Alimentos, Superficies
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3: Listeria -->
+      <div class="col">
+        <div class="service-card-img">
+          <img src="/src/img/Listeria.png" alt="Listeria monocytogenes">
+          <div class="overlay"></div>
+          <div class="content">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8CC63F" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+              </svg>
+              <h4 class="fw-bold mb-0">L. monocytogenes</h4>
+            </div>
+            <p class="mb-0 small opacity-75 lh-sm">
+              • Aislamiento (NOM-210)<br>
+              • Detección ambiental (PTMIC04)<br>
+              Aplica: Alimentos, Superficies
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 4: Salmonella -->
+      <div class="col">
+        <div class="service-card-img">
+          <img src="/src/img/salmonella.png" alt="Salmonella spp">
+          <div class="overlay"></div>
+          <div class="content">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8CC63F" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+              </svg>
+              <h4 class="fw-bold mb-0">Salmonella spp</h4>
+            </div>
+            <p class="mb-0 small opacity-75 lh-sm">
+              • Aislamiento (NOM-210)<br>
+              • Placa Petrifilm (AOAC 2014.01)<br>
+              Aplica: Agua, Alimentos, Superficies
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Tarjeta 3: Control de Calidad -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card h-100 border-0 shadow-sm hover-card p-4">
-        <div class="card-body">
-          <div class="mb-3">
-            <h3 class="fw-bold text-primary display-6">03</h3>
+    <!-- Título Sección Indicadores -->
+    <div class="text-center mb-5 mt-5 pt-4">
+      <h3 class="display-6 fw-bolder text-corporate-blue mb-3">Indicadores y
+        Control de Calidad</h3>
+      <div class="mx-auto bg-primary rounded mb-4" style="height: 4px; width: 60px;"></div>
+    </div>
+
+    <!-- Cuadrícula de 3 Tarjetas (Control de Calidad) -->
+    <div class="row g-4 mb-5">
+
+      <!-- Mesófilos -->
+      <div class="col-12 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-card bg-light">
+          <div class="mb-4 text-corporate-green">
+            <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <circle cx="12" cy="12" r="7" stroke-dasharray="1.5 2"></circle>
+
+              <circle cx="8.5" cy="9" r="1" fill="currentColor" stroke="none"></circle>
+              <circle cx="14.5" cy="8" r=".8" fill="currentColor" stroke="none"></circle>
+              <circle cx="16" cy="13" r="1.1" fill="currentColor" stroke="none"></circle>
+              <circle cx="10" cy="15" r=".9" fill="currentColor" stroke="none"></circle>
+              <circle cx="7.5" cy="13.5" r=".7" fill="currentColor" stroke="none"></circle>
+            </svg>
           </div>
-          <h4 class="card-title fw-bold text-dark mb-3">Control de Calidad</h4>
-          <p class="card-text text-secondary mb-4">
-            Monitoreo preventivo mediante métodos oficiales AOAC y procedimientos internos.
-          </p>
-          <ul class="list-unstyled text-muted small">
-            <li class="mb-2">✓ Hongos y levaduras (Método rápido y tradicional)[cite: 1]</li>
-            <li class="mb-2">✓ Recuento de S. aureus[cite: 1]</li>
-            <li class="mb-2">✓ Análisis en superficies vivas e inertes[cite: 1]</li>
-          </ul>
+          <h5 class="fw-bold text-corporate-blue mb-3">Mesófilos Aerobios</h5>
+          <p class="text-muted small mb-0 lh-lg">Cuenta de bacterias en placa
+            (NOM-092-SSA1-1994). Indicador general de higiene, aplica a
+            alimentos, agua y superficies vivas e inertes.</p>
         </div>
       </div>
+
+      <!-- Hongos y Levaduras -->
+      <div class="col-12 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-card bg-light">
+          <div class="mb-4 text-corporate-green">
+
+            <svg class="icono-levaduras" width="45" height="45" viewBox="0 0 48 48" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <!-- Células de levadura -->
+              <ellipse cx="17" cy="18" rx="7" ry="8" fill="currentColor" />
+              <ellipse cx="29" cy="14" rx="5.5" ry="6.5" fill="currentColor" />
+              <ellipse cx="32" cy="27" rx="8" ry="7" fill="currentColor" />
+              <ellipse cx="17" cy="33" rx="8" ry="6.5" fill="currentColor" />
+              <!-- Gemación -->
+              <ellipse cx="23" cy="23" rx="4" ry="4.5" fill="currentColor" />
+              <ellipse cx="39" cy="34" rx="4" ry="4.5" fill="currentColor" />
+              <!-- Detalles celulares -->
+              <ellipse cx="17" cy="18" rx="2.5" ry="3" fill="white" opacity=".45" />
+              <ellipse cx="29" cy="14" rx="2" ry="2.5" fill="white" opacity=".45" />
+              <ellipse cx="32" cy="27" rx="2.8" ry="2.5" fill="white" opacity=".45" />
+              <ellipse cx="17" cy="33" rx="2.5" ry="2" fill="white" opacity=".45" />
+            </svg>
+          </div>
+          <h5 class="fw-bold text-corporate-blue mb-3">Hongos y Levaduras</h5>
+          <p class="text-muted small mb-0 lh-lg">Recuento oficial en placa
+            Petrifilm (AOAC 2014.05) y procedimiento interno (PTMIC03-1) para
+            análisis rápido en superficies.</p>
+        </div>
+      </div>
+
+      <!-- S. aureus -->
+      <div class="col-12 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-card bg-light">
+          <div class="mb-4 text-corporate-green">
+            <svg class="icono-staphylococcus" width="45" height="45" viewBox="0 0 48 48" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <!-- Racimo principal de cocos -->
+              <circle cx="16" cy="16" r="6" fill="currentColor" />
+              <circle cx="27" cy="13" r="5.5" fill="currentColor" />
+              <circle cx="35" cy="20" r="6" fill="currentColor" />
+              <circle cx="11" cy="27" r="5.5" fill="currentColor" />
+              <circle cx="22" cy="26" r="6.5" fill="currentColor" />
+              <circle cx="33" cy="30" r="6" fill="currentColor" />
+              <circle cx="17" cy="38" r="6" fill="currentColor" />
+              <circle cx="29" cy="40" r="5.5" fill="currentColor" />
+              <!-- Detalles celulares -->
+              <circle cx="16" cy="16" r="2" fill="white" opacity=".4" />
+              <circle cx="27" cy="13" r="1.8" fill="white" opacity=".4" />
+              <circle cx="35" cy="20" r="2" fill="white" opacity=".4" />
+              <circle cx="11" cy="27" r="1.8" fill="white" opacity=".4" />
+              <circle cx="22" cy="26" r="2.2" fill="white" opacity=".4" />
+              <circle cx="33" cy="30" r="2" fill="white" opacity=".4" />
+              <circle cx="17" cy="38" r="2" fill="white" opacity=".4" />
+              <circle cx="29" cy="40" r="1.8" fill="white" opacity=".4" />
+            </svg>
+          </div>
+          <h5 class="fw-bold text-corporate-blue mb-3">Staphylococcus
+            aureus</h5>
+          <p class="text-muted small mb-0 lh-lg">Recuento acreditable en placa
+            Petrifilm Staph Express (AOAC 2003.07). Patógeno indicador crítico
+            para el sector de alimentos.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Botón CTA Inferior -->
+    <div class="text-center mt-4">
+      <a href="#contacto" class="btn btn-primary text-dark fw-bold rounded-pill px-5 py-3 shadow-sm border-0">
+        Solicitar cotización de análisis
+      </a>
     </div>
 
   </div>
