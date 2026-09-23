@@ -1,16 +1,15 @@
 .custom-floating-nav {
-  // Color base con transparencia controlada y efecto esmerilado
   background-color: rgba($biolitycs-blue-dark, 0.82) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   
-  // Borde sutil traslúcido para definir la silueta
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28) !important;
   transition: all 0.3s ease;
 
-  // 1. Diseño responsivo: Más cuadrado para móviles y tablets
   border-radius: 0.75rem; 
+  animation: fadeInDown 0.8s ease-in-out;
+  z-index: 1050;
 
   // 2. Pantallas grandes (escritorio): Cambia a forma de píldora
   @media (min-width: 992px) {
@@ -54,7 +53,14 @@
   }
 }
 
-
-
-
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
