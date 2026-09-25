@@ -1,6 +1,15 @@
 body {
   padding-top: 0;
 }
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+html {
+  scroll-padding-top: 120px; 
+  scroll-behavior: smooth; 
+}
 
 .color-biolitycs-green {
   color: $biolitycs-green
