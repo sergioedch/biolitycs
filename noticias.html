@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/logo_blanco.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biolitycs Lab | Noticias y Artículos</title>
+  <meta name="description"
+    content="Mantente al día con las últimas noticias, actualizaciones normativas, artículos de interés y comunicados oficiales de Biolitycs Lab." />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#003865" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Noticias | Biolitycs Lab" />
+  <meta property="og:description"
+    content="Conoce las novedades y artículos recientes sobre análisis agroalimentario e inocuidad." />
+  <meta property="og:url" content="https://biolitycslab.qualitechai.com/noticias.html" />
+  <meta property="og:image" content="https://biolitycslab.qualitechai.com/src/img/Biolitycs_Lab_Logo.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Noticias | Biolitycs Lab" />
+  <meta name="twitter:description"
+    content="Entérate de las últimas novedades y artículos de nuestro laboratorio." />
+  <meta name="twitter:image" content="https://biolitycslab.qualitechai.com/src/img/Biolitycs_Lab_Logo.png" />
+</head>
+
+<body class="bg-light">
+
+  <load src="/src/components/navbar.html" />
+
+  <main>
+    <!-- Seccion contenedora para las noticias que traerá tu API -->
+    <section class="py-5 mt-5">
+      <div class="container py-5">
+        <div class="row mb-4">
+          <div class="col-12 text-center">
+            <!-- Cambiamos text-white por colores oscuros/corporativos -->
+            <h1 class="text-corporate-blue fw-bold">Últimas Noticias y Artículos</h1>
+            <p class="text-muted">Información relevante sobre análisis, calidad e inocuidad alimentaria.</p>
+          </div>
+        </div>
+        <!-- Aquí es donde JavaScript inyectará las tarjetas de noticias -->
+        <div id="contenedor-noticias" class="row g-4">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <load src="/src/components/footer.html" />
+  <load src="/src/components/modals.html" />
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/js/noticias.js"></script>
+</body>
+</html>
