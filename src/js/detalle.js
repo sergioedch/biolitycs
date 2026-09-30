@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const contenedor = document.getElementById("detalle-noticia");
-    
+
     // Extraemos el 'slug' de la URL (ej. ?slug=nueva-acreditacion-17025)
     const urlParams = new URLSearchParams(window.location.search);
     const slug = urlParams.get('slug');
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
         // Petición a tu API buscando el artículo específico por su slug
         // Nota: Asegúrate de que tu Laravel tenga esta ruta habilitada (ej. Route::get('/noticias-biolitycs/{slug}', ...))
-        const response = await fetch(`https://demo.qualitechai.com/api/noticias-biolitycs/${slug}`); 
+        const response = await fetch(`https://demo.qualitechai.com/api/noticias-biolitycs/${slug}`);
         const result = await response.json();
 
         // Verificamos si la respuesta es exitosa y trae datos
@@ -42,7 +42,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                         </figure>` : ''}
 
                         <!-- Contenedor del texto (Si usas un editor tipo Quill.js en tu backend, aquí se pintará el HTML guardado) -->
-                        <section class="mb-5 lh-lg fs-5 text-secondary">
+                       <!-- Le quitamos el text-secondary y le ponemos una clase tuya por si quieres darle estilos después -->
+                        <section class="mb-5 lh-lg fs-5 contenido-editor">
                             ${noticia.contenido}
                         </section>
                         
