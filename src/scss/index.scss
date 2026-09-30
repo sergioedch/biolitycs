@@ -587,3 +587,53 @@ html {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+// --- ESTILOS DEL DETALLE DE NOTICIA ---
+#detalle-noticia {
+  
+  // Animación de entrada suave
+  .fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+  .contenido-editor {
+    font-size: 1.125rem; 
+    color: $contact-text-color; 
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .imagen-destacada {
+    img {
+      transition: transform 0.5s ease;
+    }
+    &:hover img {
+      transform: scale(1.02);
+    }
+  }
+
+  .btn-volver {
+    transition: all 0.3s ease;
+    
+    svg {
+      transition: transform 0.3s ease;
+    }
+    
+    &:hover {
+      box-shadow: 0 4px 12px rgba($primary, 0.3);
+      transform: translateY(-2px);
+      
+      svg {
+        transform: translateX(-4px);
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
