@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                                 
                                 <!-- Botón alineado al fondo -->
                                 <div class="mt-auto">
-                                    <a href="noticia-detalle.html?slug=${noticia.slug}" class="text-decoration-none fw-bold text-corporate-blue d-inline-flex align-items-center btn-leer-mas">
+                                    <a href="noticia-detalle.php?slug=${noticia.slug}" class="text-decoration-none fw-bold text-corporate-blue d-inline-flex align-items-center btn-leer-mas">
                                         Leer artículo
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="ms-2 icono-flecha">
                                             <line x1="5" y1="12" x2="19" y2="12"></line>

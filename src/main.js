@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentPath = window.location.pathname;
   const isHome = currentPath === '/' || currentPath.includes('index.html');
 
-  // MAGIA 1: Si vienes desde noticias.html dando clic a "Contacto", el navegador saltará a /#contacto. 
-  // Esto limpia el "#contacto" de la URL un instante después de cargar para dejarla limpia.
   if (isHome && window.location.hash) {
     setTimeout(() => {
       history.replaceState(null, null, '/');
@@ -55,8 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 2. Marcar "activo" manualmente si estamos en noticias.html
-  if (currentPath.includes('noticias.html')) {
+// 2. Marcar "activo" manualmente si estamos en noticias.html O en noticia-detalle.php
+  if (currentPath.includes('noticias.html') || currentPath.includes('noticia-detalle.php')) {
     document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
     const noticiasLink = document.querySelector('.nav-link[href="/noticias.html"]');
     if (noticiasLink) noticiasLink.classList.add('active');
@@ -67,8 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     once: true,
     offset: 100,
   });
-
-  // 3. Observer para iluminar el menú mientras haces scroll
+  
   setTimeout(() => {
     const sections = document.querySelectorAll('section[id], header[id]');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -78,7 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (entry.isIntersecting) {
           const id = entry.target.getAttribute('id');
           
-          if (!currentPath.includes('noticias.html')) {
+          // Evitamos que el observer quite la clase activa en cualquiera de las dos páginas de noticias
+          if (!currentPath.includes('noticias.html') && !currentPath.includes('noticia-detalle.php')) {
              navLinks.forEach(link => link.classList.remove('active'));
              
              const activeLink = document.querySelector(`.nav-link[href="/#${id}"]`);
